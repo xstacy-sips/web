@@ -8,6 +8,68 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&family=Playpen+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional Menu Styles */
+        .menu-item-header {
+            margin-bottom: 1rem;
+        }
+
+        .menu-badges {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge.bestseller {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #000;
+        }
+
+        .badge.must-try {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+            color: white;
+        }
+
+        .badge.new {
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            color: white;
+        }
+
+        .badge.healthy {
+            background: linear-gradient(135deg, #56ab2f, #a8e063);
+            color: white;
+        }
+
+        .menu-item-price {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .price-large {
+            font-size: 1.3rem;
+            color: var(--primary);
+        }
+
+        .category-note {
+            font-size: 1.1rem;
+        }
+
+        /* Enhanced menu item hover effect */
+        .menu-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(56, 83, 164, 0.2);
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -34,111 +96,832 @@
     <!-- Menu Header -->
     <section class="page-header">
         <h1>Our Menu</h1>
-        <p>Discover our delicious selection of hot and cold beverages</p>
+        <p>Making The World Smile, One Sip at a Time</p>
     </section>
 
     <!-- Menu Section -->
     <section class="menu">
         <div class="container">
             
-
+            <!-- Sparkling Nectar (Soda Based) -->
             <div class="menu-category">
-                <h3 class="category-title">Sparkling Nectar</h3>
+                <h3 class="category-title">Sparkling Nectar <span style="font-size: 0.8em; color: #846b59;">(soda based)</span></h3>
+                <p class="category-note" style="text-align: center; color: #846b59; margin-bottom: 2rem; font-style: italic;">Add energy scoop for ₹50</p>
+                
                 <div class="menu-grid">
+                    <!-- Purple Haze -->
                     <div class="menu-item">
-                        <div class="menu-item-image">Citrus</div>
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge must-try">Must Try</span>
+                            </div>
+                        </div>
                         <div class="menu-item-content">
-                            <h3>Citrus Burst</h3>
-                            <p class="menu-item-description">A refreshing blend of fresh citrus fruits that awakens your senses and lifts your mood.</p>
-                            <p class="menu-item-price">₹150</p>
+                            <h3>Purple Haze</h3>
+                            <p class="menu-item-description">Lavender Nuts & Berries. A small garden in every sip!</p>
+                            <p class="menu-item-price">₹115 <span class="price-large">₹129</span></p>
                         </div>
                     </div>
+
+                    <!-- Blockbuster -->
                     <div class="menu-item">
-                        <div class="menu-item-image">Berry</div>
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge bestseller">Bestseller</span>
+                            </div>
+                        </div>
                         <div class="menu-item-content">
-                            <h3>Berry Bliss</h3>
-                            <p class="menu-item-description">Sweet, tangy, and bursting with antioxidants. A healthy treat that tastes like heaven.</p>
-                            <p class="menu-item-price">₹170</p>
+                            <h3>Blockbuster</h3>
+                            <p class="menu-item-description">Popcorn & Cranberries. A whole cinema in your mouth!</p>
+                            <p class="menu-item-price">₹115 <span class="price-large">₹129</span></p>
                         </div>
                     </div>
+
+                    <!-- Palom -->
                     <div class="menu-item">
-                        <div class="menu-item-image">Tropical</div>
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge bestseller">Bestseller</span>
+                            </div>
+                        </div>
                         <div class="menu-item-content">
-                            <h3>Tropical Paradise</h3>
-                            <p class="menu-item-description">Escape to the islands with this exotic blend of tropical fruits and coconut cream.</p>
-                            <p class="menu-item-price">₹190</p>
+                            <h3>Palom</h3>
+                            <p class="menu-item-description">Coffee, Ginger & Cranberry. Get Kicked by a coffee but with a sweet leg!</p>
+                            <p class="menu-item-price">₹115 <span class="price-large">₹129</span></p>
+                        </div>
+                    </div>
+
+                    <!-- After Lunch -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge must-try">Must Try</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>After Lunch</h3>
+                            <p class="menu-item-description">Fennel seeds, Lime & Cumin. Calming drink for a soothing night!</p>
+                            <p class="menu-item-price">₹115 <span class="price-large">₹129</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Sparkling Sea -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Sparkling Sea</h3>
+                            <p class="menu-item-description">Kiwi, Mint, & Lemon. Little tangy & lots of refreshing!</p>
+                            <p class="menu-item-price">₹89 <span class="price-large">₹99</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Starlight -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Starlight</h3>
+                            <p class="menu-item-description">Litchi, Mint & Lemon. Sweet & Refreshing like a breeze!</p>
+                            <p class="menu-item-price">₹89 <span class="price-large">₹99</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Rio -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Rio</h3>
+                            <p class="menu-item-description">Guava, Chilly & Mint. Kinda hot but also sweet!</p>
+                            <p class="menu-item-price">₹89 <span class="price-large">₹99</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Margarita -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Margarita</h3>
+                            <p class="menu-item-description">Peach, Honey & Salt. A vibrant drink for a alive Personality!</p>
+                            <p class="menu-item-price">₹89 <span class="price-large">₹99</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Mosambi -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge must-try">Must Try</span>
+                                <span class="badge new">New</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Mosambi</h3>
+                            <p class="menu-item-description">Mosambi</p>
+                            <p class="menu-item-price">₹109 <span class="price-large">₹129</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Forest -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge new">New</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Forest</h3>
+                            <p class="menu-item-description">Cucumber, Lime & Salt. A liquid safari of a Rainforest!</p>
+                            <p class="menu-item-price">₹79 <span class="price-large">₹89</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Sunshine -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Sunshine</h3>
+                            <p class="menu-item-description">Peach & Pomegranate. Rise and shine in the sunshine!</p>
+                            <p class="menu-item-price">₹79 <span class="price-large">₹89</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Lotus -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Lotus</h3>
+                            <p class="menu-item-description">Litchi & Rose. For admires of simplicity!</p>
+                            <p class="menu-item-price">₹79 <span class="price-large">₹89</span></p>
+                        </div>
+                    </div>
+
+                    <!-- GrassHopper -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>GrassHopper</h3>
+                            <p class="menu-item-description">Green apple & Ginger. Jungle safari of taste buds!</p>
+                            <p class="menu-item-price">₹89 <span class="price-large">₹99</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Water Balloon -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge new">New</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Water Balloon</h3>
+                            <p class="menu-item-description">Watermelon, Orange & Mint. Summer vibes of your Nani's house!</p>
+                            <p class="menu-item-price">₹89 <span class="price-large">₹99</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Martini -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Martini</h3>
+                            <p class="menu-item-description">Ginger & Lemon. For admirers of Chai!</p>
+                            <p class="menu-item-price">₹79 <span class="price-large">₹89</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Cinderella -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Cinderella</h3>
+                            <p class="menu-item-description">Strawberries & Kiwi. Too sweet to be true!</p>
+                            <p class="menu-item-price">₹89 <span class="price-large">₹99</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Pre-workout -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Pre-workout</h3>
+                            <p class="menu-item-description">Get the Energy Rush in Lemon flavor</p>
+                            <p class="menu-item-price">₹129 <span class="price-large">₹149</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Pinacolada -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge new">New</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Pinacolada</h3>
+                            <p class="menu-item-description">Pineapple and Coconut. Tropical goa vibes only!</p>
+                            <p class="menu-item-price">₹89 <span class="price-large">₹99</span></p>
+                        </div>
+                    </div>
+
+                     <!-- Ice Tea -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge new">New</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Ice Tea</h3>
+                            <p class="menu-item-description">Lemon & Tea. Black tea on the rocks!</p>
+                            <p class="menu-item-price">₹69 <span class="price-large">₹79</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Forest -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge new">New</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Forest</h3>
+                            <p class="menu-item-description">Cucumber, Lime & Salt. A liquid safari of a Rainforest!</p>
+                            <p class="menu-item-price">₹79 <span class="price-large">₹89</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Sunshine -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Sunshine</h3>
+                            <p class="menu-item-description">Peach & Pomegranate. Rise and shine in the sunshine!</p>
+                            <p class="menu-item-price">₹79 <span class="price-large">₹89</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Lotus -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Lotus</h3>
+                            <p class="menu-item-description">Litchi & Rose. For admires of simplicity!</p>
+                            <p class="menu-item-price">₹79 <span class="price-large">₹89</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Americano (Black Coffee on rocks) -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Americano</h3>
+                            <p class="menu-item-description">Black Coffee on the rocks</p>
+                            <p class="menu-item-price">₹69 <span class="price-large">₹79</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Martini -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Martini</h3>
+                            <p class="menu-item-description">Ginger & Lemon. For admirers of Chai!</p>
+                            <p class="menu-item-price">₹79 <span class="price-large">₹89</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Strawberries -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Strawberries</h3>
+                            <p class="menu-item-description">Cursed Strawberries in sparkling water</p>
+                            <p class="menu-item-price">₹89 <span class="price-large">₹99</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Virgin Mojito -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Virgin Mojito</h3>
+                            <p class="menu-item-description">Lemon & Mint. Simplest form of happiness!</p>
+                            <p class="menu-item-price">₹59 <span class="price-large">₹69</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Blueberries -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge new">New</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Blueberries</h3>
+                            <p class="menu-item-description">Cursed Blueberries in sparkling water</p>
+                            <p class="menu-item-price">₹109 <span class="price-large">₹129</span></p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Milky Nectar (Milk Based) -->
             <div class="menu-category">
-                <h3 class="category-title">Milky Nectar</h3>
+                <h3 class="category-title">Milky Nectar <span style="font-size: 0.8em; color: #846b59;">(Milk based)</span></h3>
+                <p class="category-note" style="text-align: center; color: #846b59; margin-bottom: 2rem; font-style: italic;">Add protein scoop for ₹70</p>
+                
                 <div class="menu-grid">
+                    <!-- Chocolate Protein -->
                     <div class="menu-item">
-                        <div class="menu-item-image">Citrus</div>
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge new">New</span>
+                                <span class="badge healthy">HEALTHY</span>
+                            </div>
+                        </div>
                         <div class="menu-item-content">
-                            <h3>Citrus Burst</h3>
-                            <p class="menu-item-description">A refreshing blend of fresh citrus fruits that awakens your senses and lifts your mood.</p>
-                            <p class="menu-item-price">₹150</p>
+                            <h3>Chocolate Protein</h3>
+                            <p class="menu-item-description">Have some protein with "no guilt" chocolate flavor!</p>
+                            <p class="menu-item-price">₹199 <span class="price-large">₹299</span></p>
                         </div>
                     </div>
+
+                    <!-- Almond Spice -->
                     <div class="menu-item">
-                        <div class="menu-item-image">Berry</div>
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge new">New</span>
+                                <span class="badge healthy">HEALTHY</span>
+                            </div>
+                        </div>
                         <div class="menu-item-content">
-                            <h3>Berry Bliss</h3>
-                            <p class="menu-item-description">Sweet, tangy, and bursting with antioxidants. A healthy treat that tastes like heaven.</p>
-                            <p class="menu-item-price">₹170</p>
+                            <h3>Almond Spice</h3>
+                            <p class="menu-item-description">Enjoy the fat loss journey with spice and almond milk!</p>
+                            <p class="menu-item-price">₹249 <span class="price-large">₹349</span></p>
                         </div>
                     </div>
+
+                    <!-- Liquid Diet -->
                     <div class="menu-item">
-                        <div class="menu-item-image">Tropical</div>
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge new">New</span>
+                                <span class="badge healthy">HEALTHY</span>
+                            </div>
+                        </div>
                         <div class="menu-item-content">
-                            <h3>Tropical Paradise</h3>
-                            <p class="menu-item-description">Escape to the islands with this exotic blend of tropical fruits and coconut cream.</p>
-                            <p class="menu-item-price">₹190</p>
+                            <h3>Liquid Diet</h3>
+                            <p class="menu-item-description">A full course meal in a drink!</p>
+                            <p class="menu-item-price">₹149 <span class="price-large">₹199</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Pailwan -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge new">New</span>
+                                <span class="badge healthy">HEALTHY</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Pailwan</h3>
+                            <p class="menu-item-description">Real Thandai.. with xstacy touch of course!</p>
+                            <p class="menu-item-price">₹149 <span class="price-large">₹199</span></p>
+                        </div>
+                    </div>
+
+                    <!-- RedVelvet -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge bestseller">Bestseller</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>RedVelvet</h3>
+                            <p class="menu-item-description">Creamy blend of Strawberries & Red Velvet cake!</p>
+                            <p class="menu-item-price">₹135 <span class="price-large">₹149</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Blueberry Cheese -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge bestseller">Bestseller</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Blueberry Cheese</h3>
+                            <p class="menu-item-description">Fusion of Tangy Blueberries and cheese!</p>
+                            <p class="menu-item-price">₹135 <span class="price-large">₹149</span></p>
+                        </div>
+                    </div>
+
+                    <!-- MangoVelvet -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge new">New</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>MangoVelvet</h3>
+                            <p class="menu-item-description">Summer vibes with Velvety cake flavor & Ripe Mangos!</p>
+                            <p class="menu-item-price">₹135 <span class="price-large">₹149</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Filter Coffee -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Filter Coffee</h3>
+                            <p class="menu-item-description">Made with Authentic 100% Arabica Beans with 12hr Immersion Brew technique</p>
+                            <p class="menu-item-price">₹135 <span class="price-large">₹149</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Mud Pie -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Mud Pie</h3>
+                            <p class="menu-item-description">Perfect balance of Berries & Chocolate! A mud of Chocolate but in a drink!</p>
+                            <p class="menu-item-price">₹89 <span class="price-large">₹99</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Fu*k Matcha -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge new">New</span>
+                                <span class="badge healthy">HEALTHY</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Fu*k Matcha</h3>
+                            <p class="menu-item-description">Healthy root to happiness with moringa and Milk. Choose one: Chocolate | Coffee | Vanilla | Caramel | Hazelnut</p>
+                            <p class="menu-item-price">₹99 <span class="price-large">₹119</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Pink Candy -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Pink Candy</h3>
+                            <p class="menu-item-description">Litchi with Berries, Sweet spot of Tangy!</p>
+                            <p class="menu-item-price">₹99 <span class="price-large">₹119</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Midnight Moca -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Midnight Moca</h3>
+                            <p class="menu-item-description">Chocolatey kick of coffee with a Blueberry shoe!</p>
+                            <p class="menu-item-price">₹99 <span class="price-large">₹119</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Black Pink -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge healthy">HEALTHY</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Black Pink</h3>
+                            <p class="menu-item-description">Sweet Sitafal with creamy twist.. simple and smooth!</p>
+                            <p class="menu-item-price">₹109 <span class="price-large">₹129</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Ice Spice -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Ice Spice</h3>
+                            <p class="menu-item-description">Real milk spices with hint of sweetness!</p>
+                            <p class="menu-item-price">₹99 <span class="price-large">₹119</span></p>
+                        </div>
+                    </div>
+
+                    <!-- BubbleGum -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>BubbleGum</h3>
+                            <p class="menu-item-description">Nostalgic strawberries of Boomer!</p>
+                            <p class="menu-item-price">₹99 <span class="price-large">₹119</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Coffee Velvet -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge must-try">Must Try</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Coffee Velvet</h3>
+                            <p class="menu-item-description">A velvety Coffee with touch of sweetness! Choose one: Vanilla | Hazelnut | Caramel</p>
+                            <p class="menu-item-price">₹79 <span class="price-large">₹89</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Berry Pop -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge must-try">Must Try</span>
+                                <span class="badge new">New</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Berry Pop</h3>
+                            <p class="menu-item-description">Mixed Berries but with a Popcorn turn!</p>
+                            <p class="menu-item-price">₹109 <span class="price-large">₹129</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Iced Cocoa -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge new">New</span>
+                                <span class="badge healthy">HEALTHY</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Iced Cocoa</h3>
+                            <p class="menu-item-description">Healthy root to happiness with moringa and Milk. Choose one: Chocolate / Coffee / Vanilla / Caramel / Hazelnut</p>
+                            <p class="menu-item-price">₹99 <span class="price-large">₹119</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Blueberries (Milky) -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Blueberries</h3>
+                            <p class="menu-item-description">Chocolatey kick of coffee with a Blueberry shoe!</p>
+                            <p class="menu-item-price">₹99 <span class="price-large">₹129</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Moca -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Moca</h3>
+                            <p class="menu-item-description">Perfect balance of Berries & Chocolate!</p>
+                            <p class="menu-item-price">₹99 <span class="price-large">₹129</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Biscoff -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge new">New</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Biscoff</h3>
+                            <p class="menu-item-description">Crushed Lotus Bischoff in cold milk. Choose one: Chocolate | Coffee | Vanilla | Caramel | Hazelnut</p>
+                            <p class="menu-item-price">₹149 <span class="price-large">₹199</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Strawberries (Milky) -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Strawberries</h3>
+                            <p class="menu-item-description">Real milk spices with hint of sweetness!</p>
+                            <p class="menu-item-price">₹99 <span class="price-large">₹129</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Stardust -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge new">New</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Stardust</h3>
+                            <p class="menu-item-description">A smooth milky vanilla milkshake</p>
+                            <p class="menu-item-price">₹109 <span class="price-large">₹129</span></p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Warm Nectar (Hot) -->
             <div class="menu-category">
-                <h3 class="category-title">Warm Nectar</h3>
+                <h3 class="category-title">Warm Nectar <span style="font-size: 0.8em; color: #846b59;">(hot)</span></h3>
+                
                 <div class="menu-grid">
+                    <!-- Filter Coffee (Hot) -->
                     <div class="menu-item">
-                        <div class="menu-item-image">Espresso</div>
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge bestseller">Bestseller</span>
+                            </div>
+                        </div>
                         <div class="menu-item-content">
-                            <h3>Classic Espresso</h3>
-                            <p class="menu-item-description">Rich, bold, and perfectly balanced. Our signature espresso shot that starts your day right.</p>
-                            <p class="menu-item-price">₹120</p>
+                            <h3>Filter Coffee</h3>
+                            <p class="menu-item-description">Made with Authentic 100% Arabica Beans with 12hr Immersion Brew technique.</p>
+                            <p class="menu-item-price">₹129 <span class="price-large">₹149</span></p>
                         </div>
                     </div>
+
+                    <!-- Pink Chai -->
                     <div class="menu-item">
-                        <div class="menu-item-image">Mudpie</div>
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge must-try">Must Try</span>
+                            </div>
+                        </div>
                         <div class="menu-item-content">
-                            <h3>Mudpie</h3>
-                            <p class="menu-item-description">A mud of chocolate but in a drink! Indulgent, creamy, and absolutely divine.</p>
-                            <p class="menu-item-price">₹180</p>
+                            <h3>Pink Chai</h3>
+                            <p class="menu-item-description">Kawa, Spices & Nuts. Same emotion different color</p>
+                            <p class="menu-item-price">₹99 <span class="price-large">₹119</span></p>
                         </div>
                     </div>
+
+                    <!-- Blueberry Mocha -->
                     <div class="menu-item">
-                        <div class="menu-item-image">Chai</div>
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge must-try">Must Try</span>
+                            </div>
+                        </div>
                         <div class="menu-item-content">
-                            <h3>Chai Xstacy</h3>
-                            <p class="menu-item-description">Our special blend of aromatic spices and premium tea leaves. Comfort in a cup.</p>
-                            <p class="menu-item-price">₹100</p>
+                            <h3>Blueberry Mocha</h3>
+                            <p class="menu-item-description">Delightful Melted Chocolate with Berry Fun!</p>
+                            <p class="menu-item-price">₹99 <span class="price-large">₹119</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Hot Chocolate -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Hot Chocolate</h3>
+                            <p class="menu-item-description">Delightful Melted Chocolate Milk! Choose One: Vanilla/ Hazelnut/ Caramel</p>
+                            <p class="menu-item-price">₹89 <span class="price-large">₹109</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Wildroot -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge must-try">Must Try</span>
+                                <span class="badge healthy">HEALTHY</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Wildroot</h3>
+                            <p class="menu-item-description">Herbal heat with a ginger kick. Warm, spicy, and unapologetically bold!</p>
+                            <p class="menu-item-price">₹59 <span class="price-large">₹79</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Masala Chai -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge new">New</span>
+                                <span class="badge healthy">HEALTHY</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Masala Chai</h3>
+                            <p class="menu-item-description">A authentic Indian chai with spices.</p>
+                            <p class="menu-item-price">₹69 <span class="price-large">₹89</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Detox -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge new">New</span>
+                                <span class="badge healthy">HEALTHY</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Detox</h3>
+                            <p class="menu-item-description">Calming fennel(saunf) drink for a soothing Night!</p>
+                            <p class="menu-item-price">₹59 <span class="price-large">₹79</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Black Filter Coffee -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge healthy">HEALTHY</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Black Filter Coffee</h3>
+                            <p class="menu-item-description">Made with Authentic 100% Arabica Beans with 12hr Immersion Brew technique.</p>
+                            <p class="menu-item-price">₹119 <span class="price-large">₹139</span></p>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Snacks & Quick Bites -->
+            <div class="menu-category">
+                <h3 class="category-title">Snacks & Quick Bites</h3>
+                
+                <div class="menu-grid">
+                    <!-- Instant Coffee -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge healthy">HEALTHY</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Instant Coffee</h3>
+                            <p class="menu-item-description">Simply milk coffee</p>
+                            <p class="menu-item-price">₹59 <span class="price-large">₹79</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Instant Black Coffee -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge healthy">HEALTHY</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Instant Black Coffee</h3>
+                            <p class="menu-item-description">Simply Black coffee</p>
+                            <p class="menu-item-price">₹59 <span class="price-large">₹79</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Cookie -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Cookie</h3>
+                            <p class="menu-item-description">4 pcs</p>
+                            <p class="menu-item-price">₹99</p>
+                        </div>
+                    </div>
+
+                    <!-- Ice Biscoff Cheesecake -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Ice Biscoff Cheesecake</h3>
+                            <p class="menu-item-price">₹189</p>
+                        </div>
+                    </div>
+
+                    <!-- Peanut Butter Toast -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3>Peanut Butter Toast</h3>
+                            <p class="menu-item-description">2 pcs</p>
+                            <p class="menu-item-price">₹109</p>
+                        </div>
+                    </div>
+
+                    <!-- Nut Mix -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge healthy">HEALTHY</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Nut Mix</h3>
+                            <p class="menu-item-price">₹149</p>
+                        </div>
+                    </div>
+
+                    <!-- Popped Lotus (Makhana) -->
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <div class="menu-badges">
+                                <span class="badge healthy">HEALTHY</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Popped Lotus (Makhana)</h3>
+                            <p class="menu-item-price">₹109</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Offer -->
+            <div class="special-offer" style="background: linear-gradient(135deg, #3853a4, #846b59); color: white; padding: 3rem; border-radius: 30px; text-align: center; margin-top: 4rem; box-shadow: 0 20px 60px rgba(56, 83, 164, 0.3);">
+                <h2 style="font-family: 'Playpen Sans', cursive; font-size: 3rem; margin-bottom: 1rem;">T@g & Sip!</h2>
+                <p style="font-size: 1.5rem; margin-bottom: 1.5rem; font-weight: 600;">Get 10% off on any drink!</p>
+                <p style="font-size: 1.2rem; opacity: 0.95;">Take a photo of your drink, Post on Insta & tag us</p>
+                <p style="font-size: 1.5rem; margin-top: 1.5rem; font-weight: 700;">@xstacy</p>
+            </div>
+
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <img src="image/logo.png" alt="Xstacy Logo" class="footer-logo-img">
-            <img src="image/xstacy-text-logo.png" alt="Xstacy" class="footer-text-logo">
+            <img src="assets/images/logo/text.png" alt="Xstacy Logo" class="footer-logo-img">
+            <!-- <img src="image/xstacy-text-logo.png" alt="Xstacy" class="footer-text-logo"> -->
             <p class="footer-tagline">Making The World Smile, One Sip at a Time</p>
             <div class="footer-links">
                 <a href="index.html">Home</a>
