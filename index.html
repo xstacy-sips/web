@@ -4,800 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xstacy - Making The World Smile, One Sip at a Time</title>
-    <!-- 
-    IMPORTANT: Make sure your folder structure is:
-    - index.html (root)
-    - ../images/logo.png
-    - ../images/text.png
-    
-    Folder and file names are CASE SENSITIVE on GitHub Pages!
-    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&family=Playpen+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #3853a4;
-            --background: #faf8f3;
-            --accent-green: #cddda3;
-            --accent-brown: #846b59;
-            --white: #ffffff;
-            --black: #000000;
-            --spacing-xs: 0.5rem;
-            --spacing-sm: 1rem;
-            --spacing-md: 2rem;
-            --spacing-lg: 4rem;
-            --spacing-xl: 6rem;
-        }
-
-        body {
-            font-family: 'Nunito', sans-serif;
-            background-color: var(--background);
-            color: var(--black);
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(250, 248, 243, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 20px rgba(56, 83, 164, 0.1);
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .logo-image {
-            height: 60px;
-            width: auto;
-            transition: transform 0.3s;
-        }
-
-        .logo-image:hover {
-            transform: scale(1.05);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--black);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            position: relative;
-            transition: color 0.3s;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: var(--primary);
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            padding: 0 5%;
-            padding-top: 100px;
-            background: linear-gradient(135deg, var(--background) 0%, var(--accent-green) 100%);
-            overflow: hidden;
-        }
-
-        .hero-content {
-            text-align: center;
-            z-index: 2;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-logo {
-            width: 250px;
-            height: auto;
-            margin-bottom: 2rem;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .hero-text-logo {
-            width: clamp(300px, 60vw, 700px);
-            height: auto;
-            margin-bottom: 2rem;
-            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
-        }
-
-        .tagline {
-            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-            color: var(--accent-brown);
-            font-weight: 700;
-            margin-bottom: 3rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .cta-button {
-            background: var(--primary);
-            color: white;
-            padding: 1.2rem 3rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-            box-shadow: 0 10px 30px rgba(56, 83, 164, 0.3);
-            font-family: 'Nunito', sans-serif;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(56, 83, 164, 0.4);
-        }
-
-        /* About Section */
-        .about {
-            padding: var(--spacing-xl) 5%;
-            background: var(--background);
-        }
-
-        .section-title {
-            font-family: 'Playpen Sans', cursive;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            text-align: center;
-            margin-bottom: var(--spacing-lg);
-            color: var(--primary);
-            position: relative;
-            font-weight: 800;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 5px;
-            background: var(--primary);
-            margin: 1rem auto;
-            border-radius: 3px;
-        }
-
-        .section-title-logo {
-            width: clamp(200px, 40vw, 400px);
-            height: auto;
-            display: block;
-            margin: 0 auto 1rem auto;
-            filter: brightness(0) saturate(100%) invert(29%) sepia(52%) saturate(1382%) hue-rotate(203deg) brightness(92%) contrast(91%);
-        }
-
-        .about-content {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 1.3rem;
-            line-height: 2;
-            color: var(--accent-brown);
-            font-weight: 400;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: var(--spacing-lg);
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .about-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 30px;
-            box-shadow: 0 10px 40px rgba(56, 83, 164, 0.1);
-            transition: all 0.3s;
-            border: 3px solid var(--accent-green);
-        }
-
-        .about-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(56, 83, 164, 0.15);
-            border-color: var(--primary);
-        }
-
-        .about-card h3 {
-            font-family: 'Playpen Sans', cursive;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        .about-card p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--accent-brown);
-        }
-
-        /* Menu Section */
-        .menu {
-            padding: var(--spacing-xl) 5%;
-            background: linear-gradient(180deg, var(--background) 0%, rgba(205, 221, 163, 0.3) 100%);
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 3rem;
-            max-width: 1400px;
-            margin: 0 auto;
-            margin-top: var(--spacing-lg);
-        }
-
-        .menu-item {
-            background: white;
-            border-radius: 25px;
-            overflow: hidden;
-            box-shadow: 0 15px 50px rgba(56, 83, 164, 0.12);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 4px solid transparent;
-        }
-
-        .menu-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 25px 60px rgba(56, 83, 164, 0.2);
-            border-color: var(--primary);
-        }
-
-        .menu-item-image {
-            width: 100%;
-            height: 280px;
-            background: linear-gradient(135deg, var(--accent-green), var(--accent-brown));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            font-weight: 800;
-            color: white;
-            font-family: 'Playpen Sans', cursive;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .menu-item-image::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
-            animation: shimmer 3s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { transform: translate(-50%, -50%); }
-            50% { transform: translate(50%, 50%); }
-            100% { transform: translate(-50%, -50%); }
-        }
-
-        .menu-item-content {
-            padding: 2rem;
-        }
-
-        .menu-item h3 {
-            font-family: 'Playpen Sans', cursive;
-            font-size: 2rem;
-            margin-bottom: 0.8rem;
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        .menu-item-description {
-            font-size: 1.1rem;
-            color: var(--accent-brown);
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .menu-item-price {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-
-        .menu-category {
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .category-title {
-            font-family: 'Playpen Sans', cursive;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: var(--primary);
-            text-align: center;
-            font-weight: 700;
-        }
-
-        /* Gallery Section */
-        .gallery {
-            padding: var(--spacing-xl) 5%;
-            background: var(--background);
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-            margin-top: var(--spacing-lg);
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(56, 83, 164, 0.15);
-            aspect-ratio: 1;
-            background: linear-gradient(135deg, var(--accent-green), var(--primary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            padding: 2rem;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 50px rgba(56, 83, 164, 0.25);
-        }
-
-        .gallery-item p {
-            font-family: 'Playpen Sans', cursive;
-            font-size: 2rem;
-            text-align: center;
-            color: white;
-            font-weight: 700;
-            z-index: 1;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: var(--spacing-xl) 5%;
-            background: linear-gradient(135deg, var(--accent-green) 0%, var(--background) 100%);
-        }
-
-        .contact-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 4rem;
-            margin-top: var(--spacing-lg);
-        }
-
-        .contact-form {
-            background: white;
-            padding: 3rem;
-            border-radius: 30px;
-            box-shadow: 0 20px 60px rgba(56, 83, 164, 0.15);
-            border: 3px solid var(--accent-green);
-        }
-
-        .form-group {
-            margin-bottom: 2rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--accent-brown);
-            font-size: 1.1rem;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 3px solid var(--accent-green);
-            border-radius: 15px;
-            font-family: 'Nunito', sans-serif;
-            font-size: 1rem;
-            transition: all 0.3s;
-            background: var(--background);
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 4px rgba(56, 83, 164, 0.1);
-        }
-
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .submit-button {
-            background: var(--primary);
-            color: white;
-            padding: 1.2rem 3rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s;
-            width: 100%;
-            box-shadow: 0 10px 30px rgba(56, 83, 164, 0.3);
-            font-family: 'Nunito', sans-serif;
-        }
-
-        .submit-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(56, 83, 164, 0.4);
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .info-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(56, 83, 164, 0.1);
-            border-left: 5px solid var(--primary);
-        }
-
-        .info-card h3 {
-            font-family: 'Playpen Sans', cursive;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        .info-card p {
-            font-size: 1.1rem;
-            color: var(--accent-brown);
-            line-height: 1.8;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .social-links a {
-            width: 50px;
-            height: 50px;
-            background: var(--primary);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: 700;
-            transition: all 0.3s;
-            font-family: 'Playpen Sans', cursive;
-        }
-
-        .social-links a:hover {
-            transform: scale(1.2);
-            background: var(--accent-brown);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary);
-            color: white;
-            padding: 3rem 5%;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-logo-img {
-            width: 120px;
-            height: auto;
-            margin-bottom: 1rem;
-            filter: brightness(0) invert(1);
-        }
-
-        .footer-text-logo {
-            width: 300px;
-            height: auto;
-            margin: 0 auto 1rem auto;
-            display: block;
-        }
-
-        .footer-tagline {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-        }
-
-        .footer-bottom {
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.3);
-            font-size: 1rem;
-            opacity: 0.8;
-        }
-
-        /* Mobile Menu */
-        .mobile-menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-
-        .mobile-menu-toggle span {
-            width: 30px;
-            height: 3px;
-            background: var(--primary);
-            border-radius: 3px;
-            transition: all 0.3s;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            nav {
-                padding: 1rem 5%;
-            }
-
-            .logo-image {
-                height: 50px;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                background: rgba(250, 248, 243, 0.98);
-                flex-direction: column;
-                align-items: center;
-                padding: 2rem;
-                gap: 1.5rem;
-                transform: translateX(-100%);
-                transition: transform 0.3s;
-                box-shadow: 0 10px 30px rgba(56, 83, 164, 0.15);
-            }
-
-            .nav-links.active {
-                transform: translateX(0);
-            }
-
-            .mobile-menu-toggle {
-                display: flex;
-            }
-
-            .hero-logo {
-                width: 180px;
-            }
-
-            .hero-text-logo {
-                width: 280px;
-            }
-
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-
-            .menu-grid,
-            .gallery-grid,
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title-logo {
-                width: 250px;
-            }
-
-            .footer-text-logo {
-                width: 200px;
-            }
-        }
-
-        /* Smooth scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Simple decorative elements */
-        .simple-pattern {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            opacity: 0.1;
-        }
-
-        .pattern-1 {
-            top: 10%;
-            left: 5%;
-            background: var(--primary);
-        }
-
-        .pattern-2 {
-            bottom: 15%;
-            right: 8%;
-            background: var(--accent-green);
-        }
-
-        /* Floating Doodles */
-        .doodle {
-            position: absolute;
-            opacity: 0.4;
-            animation: floatDoodle 8s ease-in-out infinite;
-            pointer-events: none;
-        }
-
-        .doodle img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        @keyframes floatDoodle {
-            0%, 100% { 
-                transform: translate(0, 0) rotate(0deg); 
-            }
-            25% { 
-                transform: translate(15px, -15px) rotate(5deg); 
-            }
-            50% { 
-                transform: translate(25px, -25px) rotate(-5deg); 
-            }
-            75% { 
-                transform: translate(10px, -10px) rotate(3deg); 
-            }
-        }
-
-        /* Position each doodle differently */
-        .doodle-1 { 
-            top: 15%; 
-            left: 8%; 
-            width: 80px;
-            height: 80px;
-            animation-delay: 0s; 
-            animation-duration: 7s;
-        }
-        
-        .doodle-2 { 
-            top: 25%; 
-            right: 12%; 
-            width: 100px;
-            height: 100px;
-            animation-delay: 1s; 
-            animation-duration: 9s;
-        }
-        
-        .doodle-3 { 
-            bottom: 25%; 
-            left: 15%; 
-            width: 70px;
-            height: 70px;
-            animation-delay: 2s; 
-            animation-duration: 8s;
-        }
-        
-        .doodle-4 { 
-            top: 60%; 
-            right: 20%; 
-            width: 90px;
-            height: 90px;
-            animation-delay: 1.5s; 
-            animation-duration: 7.5s;
-        }
-
-        .doodle-5 { 
-            top: 40%; 
-            left: 25%; 
-            width: 60px;
-            height: 60px;
-            animation-delay: 3s; 
-            animation-duration: 8.5s;
-        }
-
-        .doodle-6 { 
-            bottom: 35%; 
-            right: 8%; 
-            width: 85px;
-            height: 85px;
-            animation-delay: 2.5s; 
-            animation-duration: 9.5s;
-        }
-
-        /* Responsive doodles */
-        @media (max-width: 768px) {
-            .doodle {
-                width: 50px !important;
-                height: 50px !important;
-            }
-            
-            .doodle-3, .doodle-5, .doodle-6 {
-                display: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav>
         <div class="logo-container">
-            <img src="images\logo\logo.png" alt="Xstacy Logo" class="logo-image">
-            
+            <a href="index.html">
+                <img src="assets\images\logo\logo.png" alt="Xstacy Logo" class="logo-image">
+            </a>
         </div>
         <div class="mobile-menu-toggle" onclick="toggleMenu()">
             <span></span>
@@ -805,236 +23,90 @@
             <span></span>
         </div>
         <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero">
         <!-- Floating Doodles -->
-        <div class="doodle doodle-1"><img src="images\doodels\doodle1.png" alt=""></div>
-        <div class="doodle doodle-2"><img src="images\doodels\doodle2.png" alt=""></div>
-        <div class="doodle doodle-3"><img src="images\doodels\doodle3.png" alt=""></div>
-        <div class="doodle doodle-4"><img src="images\doodels\doodle4.png" alt=""></div>
-        <div class="doodle doodle-5"><img src="images\doodels\doodle5.png" alt=""></div>
-        <div class="doodle doodle-6"><img src="images\doodels\doodle6.png" alt=""></div>
+        <div class="doodle doodle-1"><img src="assets\images\doodels\doodle1.png" alt=""></div>
+        <div class="doodle doodle-2"><img src="assets\images\doodels\doodle2.png" alt=""></div>
+        <div class="doodle doodle-3"><img src="assets\images\doodels\doodle3.png" alt=""></div>
+        <div class="doodle doodle-4"><img src="assets\images\doodels\doodle4.png" alt=""></div>
+        <div class="doodle doodle-5"><img src="assets\images\doodels\doodle5.png" alt=""></div>
+        <div class="doodle doodle-6"><img src="assets\images\doodels\doodle6.png" alt=""></div>
         
         <div class="hero-content">
-            <!-- <img src="images/logo/logo.png" alt="Xstacy Logo" class="hero-logo"> -->
-            <img src="images\logo\text.png" alt="Xstacy" class="hero-text-logo">
+            <!-- <img src="assets\images\logo\logo.png" alt="Xstacy Logo" class="hero-logo"> -->
+            <img src="assets\images\logo\text.png" alt="Xstacy" class="hero-text-logo">
             <p class="tagline">Making The World Smile, One Sip at a Time</p>
-            <a href="#menu" class="cta-button">Explore Our Drinks</a>
+            <a href="menu.html" class="cta-button">Explore Our Drinks</a>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <img src="images\logo\text.png" alt="Xstacy" class="section-title-logo">
-        <h2 class="section-title">About Us</h2>
-        <p class="about-content">
-            Welcome to Xstacy, where every sip is a journey to pure joy! We're a beverage brand that believes drinks should do more than quench your thirst—they should bring happiness, spark conversations, and create moments of pure delight.
-        </p>
-        <div class="about-grid">
-            <div class="about-card">
-                <h3>Creative Flavors</h3>
-                <p>We craft unique hot and cold beverages that surprise and delight. From classic favorites to innovative creations, each drink is designed to make you smile.</p>
-            </div>
-            <div class="about-card">
-                <h3>Happy Vibes</h3>
-                <p>Our brand is all about spreading joy. We believe that happiness is contagious, and it starts with that first sip of something truly special.</p>
-            </div>
-            <div class="about-card">
-                <h3>Premium Quality</h3>
-                <p>We use only the finest ingredients to create beverages that are both delicious and memorable. Quality you can taste, joy you can feel.</p>
-            </div>
+    <!-- Quick About Preview -->
+    <section class="home-about-preview">
+        <div class="container">
+            <h2 class="section-title">Welcome to Xstacy</h2>
+            <p class="preview-text">
+                Where every sip is a journey to pure joy! We craft unique hot and cold beverages 
+                that bring happiness and create moments of pure delight.
+            </p>
+            <a href="about.html" class="secondary-button">Learn More About Us</a>
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section class="menu" id="menu">
-        <h2 class="section-title">Our Menu</h2>
-        
-        <div class="menu-category">
-            <h3 class="category-title">Hot Drinks</h3>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <div class="menu-item-image">Espresso</div>
-                    <div class="menu-item-content">
-                        <h3>Classic Espresso</h3>
-                        <p class="menu-item-description">Rich, bold, and perfectly balanced. Our signature espresso shot that starts your day right.</p>
-                        <p class="menu-item-price">₹120</p>
-                    </div>
+    <!-- Quick Menu Preview -->
+    <section class="home-menu-preview">
+        <div class="container">
+            <h2 class="section-title">Featured Drinks</h2>
+            <div class="preview-grid">
+                <div class="preview-card">
+                    <div class="preview-card-image">Mudpie</div>
+                    <h3>Mudpie</h3>
+                    <p>A mud of chocolate but in a drink!</p>
+                    <span class="price">₹180</span>
                 </div>
-                <div class="menu-item">
-                    <div class="menu-item-image">Mudpie</div>
-                    <div class="menu-item-content">
-                        <h3>Mudpie</h3>
-                        <p class="menu-item-description">A mud of chocolate but in a drink! Indulgent, creamy, and absolutely divine.</p>
-                        <p class="menu-item-price">₹180</p>
-                    </div>
+                <div class="preview-card">
+                    <div class="preview-card-image">Berry</div>
+                    <h3>Berry Bliss</h3>
+                    <p>Sweet, tangy, and bursting with joy</p>
+                    <span class="price">₹170</span>
                 </div>
-                <div class="menu-item">
-                    <div class="menu-item-image">Chai</div>
-                    <div class="menu-item-content">
-                        <h3>Chai Xstacy</h3>
-                        <p class="menu-item-description">Our special blend of aromatic spices and premium tea leaves. Comfort in a cup.</p>
-                        <p class="menu-item-price">₹100</p>
-                    </div>
+                <div class="preview-card">
+                    <div class="preview-card-image">Chai</div>
+                    <h3>Chai Xstacy</h3>
+                    <p>Comfort in a cup</p>
+                    <span class="price">₹100</span>
                 </div>
             </div>
-        </div>
-
-        <div class="menu-category">
-            <h3 class="category-title">Cold Drinks</h3>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <div class="menu-item-image">Citrus</div>
-                    <div class="menu-item-content">
-                        <h3>Citrus Burst</h3>
-                        <p class="menu-item-description">A refreshing blend of fresh citrus fruits that awakens your senses and lifts your mood.</p>
-                        <p class="menu-item-price">₹150</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-image">Berry</div>
-                    <div class="menu-item-content">
-                        <h3>Berry Bliss</h3>
-                        <p class="menu-item-description">Sweet, tangy, and bursting with antioxidants. A healthy treat that tastes like heaven.</p>
-                        <p class="menu-item-price">₹170</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-image">Tropical</div>
-                    <div class="menu-item-content">
-                        <h3>Tropical Paradise</h3>
-                        <p class="menu-item-description">Escape to the islands with this exotic blend of tropical fruits and coconut cream.</p>
-                        <p class="menu-item-price">₹190</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
-        <h2 class="section-title">Our Happy Moments</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <p>Making Moments Memorable</p>
-            </div>
-            <div class="gallery-item">
-                <p>Smiles All Around</p>
-            </div>
-            <div class="gallery-item">
-                <p>Pure Joy in Every Sip</p>
-            </div>
-            <div class="gallery-item">
-                <p>Creating Happiness Daily</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-container">
-            <form class="contact-form" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required placeholder="John Doe">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required placeholder="john@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required placeholder="Tell us what makes you smile..."></textarea>
-                </div>
-                <button type="submit" class="submit-button">Send Message</button>
-            </form>
-            
-            <div class="contact-info">
-                <div class="info-card">
-                    <h3>Visit Us</h3>
-                    <p>Come experience the joy at our flagship store. We're waiting for you!</p>
-                </div>
-                <div class="info-card">
-                    <h3>Connect With Us</h3>
-                    <p>Follow us on social media for daily doses of happiness and special offers!</p>
-                    <div class="social-links">
-                        <a href="https://instagram.com/xstacy.sips" target="_blank" title="Instagram">IG</a>
-                        <a href="#" title="Facebook">FB</a>
-                        <a href="#" title="Twitter">TW</a>
-                    </div>
-                </div>
-                <div class="info-card">
-                    <h3>Email Us</h3>
-                    <p>hello@xstacy.com<br>We'd love to hear from you!</p>
-                </div>
-            </div>
+            <a href="menu.html" class="secondary-button">View Full Menu</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <img src="images\logo\logo.png" alt="Xstacy Logo" class="footer-logo-img">
-            <img src="images\logo\text.png" alt="Xstacy" class="footer-text-logo">
+            <img src="assets\images\logo\text_white.png" alt="Xstacy" class="footer-text-logo">
             <p class="footer-tagline">Making The World Smile, One Sip at a Time</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Xstacy. All rights reserved. | Design by Arti Kathe</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('navLinks').classList.remove('active');
-            });
-        });
-
-        // Form submission handler
-        function handleSubmit(event) {
-            event.preventDefault();
-            alert('Thank you for reaching out! We\'ll get back to you soon and make your day even brighter!');
-            event.target.reset();
-        }
-
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.menu-item, .about-card, .gallery-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s ease-out';
-            observer.observe(el);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

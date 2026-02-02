@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Xstacy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&family=Playpen+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="image/logo.png" alt="Xstacy Logo" class="logo-image">
+            </a>
+        </div>
+        <div class="mobile-menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html" class="active">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Menu Header -->
+    <section class="page-header">
+        <h1>Our Menu</h1>
+        <p>Discover our delicious selection of hot and cold beverages</p>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu">
+        <div class="container">
+            
+
+            <div class="menu-category">
+                <h3 class="category-title">Sparkling Nectar</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">Citrus</div>
+                        <div class="menu-item-content">
+                            <h3>Citrus Burst</h3>
+                            <p class="menu-item-description">A refreshing blend of fresh citrus fruits that awakens your senses and lifts your mood.</p>
+                            <p class="menu-item-price">₹150</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">Berry</div>
+                        <div class="menu-item-content">
+                            <h3>Berry Bliss</h3>
+                            <p class="menu-item-description">Sweet, tangy, and bursting with antioxidants. A healthy treat that tastes like heaven.</p>
+                            <p class="menu-item-price">₹170</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">Tropical</div>
+                        <div class="menu-item-content">
+                            <h3>Tropical Paradise</h3>
+                            <p class="menu-item-description">Escape to the islands with this exotic blend of tropical fruits and coconut cream.</p>
+                            <p class="menu-item-price">₹190</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3 class="category-title">Milky Nectar</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">Citrus</div>
+                        <div class="menu-item-content">
+                            <h3>Citrus Burst</h3>
+                            <p class="menu-item-description">A refreshing blend of fresh citrus fruits that awakens your senses and lifts your mood.</p>
+                            <p class="menu-item-price">₹150</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">Berry</div>
+                        <div class="menu-item-content">
+                            <h3>Berry Bliss</h3>
+                            <p class="menu-item-description">Sweet, tangy, and bursting with antioxidants. A healthy treat that tastes like heaven.</p>
+                            <p class="menu-item-price">₹170</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">Tropical</div>
+                        <div class="menu-item-content">
+                            <h3>Tropical Paradise</h3>
+                            <p class="menu-item-description">Escape to the islands with this exotic blend of tropical fruits and coconut cream.</p>
+                            <p class="menu-item-price">₹190</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3 class="category-title">Warm Nectar</h3>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">Espresso</div>
+                        <div class="menu-item-content">
+                            <h3>Classic Espresso</h3>
+                            <p class="menu-item-description">Rich, bold, and perfectly balanced. Our signature espresso shot that starts your day right.</p>
+                            <p class="menu-item-price">₹120</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">Mudpie</div>
+                        <div class="menu-item-content">
+                            <h3>Mudpie</h3>
+                            <p class="menu-item-description">A mud of chocolate but in a drink! Indulgent, creamy, and absolutely divine.</p>
+                            <p class="menu-item-price">₹180</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">Chai</div>
+                        <div class="menu-item-content">
+                            <h3>Chai Xstacy</h3>
+                            <p class="menu-item-description">Our special blend of aromatic spices and premium tea leaves. Comfort in a cup.</p>
+                            <p class="menu-item-price">₹100</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <img src="image/logo.png" alt="Xstacy Logo" class="footer-logo-img">
+            <img src="image/xstacy-text-logo.png" alt="Xstacy" class="footer-text-logo">
+            <p class="footer-tagline">Making The World Smile, One Sip at a Time</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Xstacy. All rights reserved. | Design by Arti Kathe</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

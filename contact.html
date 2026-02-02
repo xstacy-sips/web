@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Xstacy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&family=Playpen+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="image/logo.png" alt="Xstacy Logo" class="logo-image">
+            </a>
+        </div>
+        <div class="mobile-menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="page-header">
+        <h1>Get In Touch</h1>
+        <p>We'd love to hear from you!</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-container">
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Tell us what makes you smile..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+                
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3>Visit Us</h3>
+                        <p>Come experience the joy at our flagship store. We're waiting for you!</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Connect With Us</h3>
+                        <p>Follow us on social media for daily doses of happiness and special offers!</p>
+                        <div class="social-links">
+                            <a href="https://instagram.com/xstacy.sips" target="_blank" title="Instagram">IG</a>
+                            <a href="#" title="Facebook">FB</a>
+                            <a href="#" title="Twitter">TW</a>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <h3>Email Us</h3>
+                        <p>hello@xstacy.com<br>We'd love to hear from you!</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Call Us</h3>
+                        <p>For inquiries and orders<br>+91 93076 54290</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <img src="image/logo.png" alt="Xstacy Logo" class="footer-logo-img">
+            <img src="image/xstacy-text-logo.png" alt="Xstacy" class="footer-text-logo">
+            <p class="footer-tagline">Making The World Smile, One Sip at a Time</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="menu.html">Menu</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Xstacy. All rights reserved. | Design by Arti Kathe</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
